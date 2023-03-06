@@ -23,3 +23,8 @@ function draw() {
 
 1) Create a function that includes the socket method to emit the directions
 _____________________________________________ */
+
+function movementButton(direction, posX, posY) {
+    //switch case UP, DOWN, RIGHT, LEFT
+    //socket.emit()
+}

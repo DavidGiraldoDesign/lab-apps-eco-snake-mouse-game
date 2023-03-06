@@ -1,13 +1,13 @@
-const express = require('express');
-const { Server } = require('socket.io');
+import express from 'express';
+import { Server } from 'socket.io';
 const PORT = 5050;
 
 const app = express();
 const httpServer = app.listen(PORT, () => {
     console.table(
         {
-            'Controller:' : 'http://localhost:5050/controller',
-            'Display:' : 'http://localhost:5050/display',
+            'Controller:': 'http://localhost:5050/controller',
+            'Display:': 'http://localhost:5050/display',
         }
     )
 });
@@ -25,6 +25,11 @@ app.use(express.json());
 1) Create an endpoint to GET a validation message to test if the endpoint is working
 _____________________________________________ */
 
+app.post('/add-lead', (request, response) => {
+    request.body //{name: 'David'}
+    const bonnus = generateBonnus();
+    response.send(bonnus);
+});
 
 /*___________________________________________
 
